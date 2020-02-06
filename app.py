@@ -15,8 +15,14 @@ def add_headers(response):
     response.headers['Access-Control-Allow-Methods'] =  "POST, GET, PUT, DELETE, OPTIONS"
     return response
 
+
 @app.route("/")
 def hello():
+    """
+      Test app with a hello world
+      :return: str
+      """
+
     return "Hello World!"
 
 
@@ -47,4 +53,8 @@ def delete_item(item_id):
 
 if __name__== "__main__":
     Schema()
+    """
+     will need to change the host before running in a production/hosted environment
+      """
+
     app.run(debug=True, host='0.0.0.0')

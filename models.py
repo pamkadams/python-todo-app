@@ -4,6 +4,10 @@ import sqlite3
 
 # create tables in database
 class Schema:
+    """
+    connect a database called
+    todo and build out user and to do tables
+    """
     def __init__(self):
         self.conn = sqlite3.connect('todo.db')
         self.create_user_table()
@@ -46,7 +50,7 @@ class Schema:
 
 
 
-    # functions to associate actions (add, delete, etc.) with DB tables
+    # class for each table with methods containing queries - read, create, delete and update with DB tables
 
 class ToDoModel:
     TABLENAME = "Todo"
